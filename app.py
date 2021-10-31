@@ -7,13 +7,18 @@ import os
 root = tk.Tk()
 apps = []
 
+if os.path.isfile('save.txt'):
+    with open('save.txt', 'r') as f:
+        tempApps = f.read()
+        tempApps = tempApps.split(',')
+        print(tempApps)
+
 # This is a function
 def exitApp():
     root.destroy()
 
 # This is a function
 def addApp():
-
     #If something already exists within the frame, destroy it.
     for widget in frame.winfo_children():
         widget.destroy()

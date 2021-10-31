@@ -1,8 +1,10 @@
 # - Init - 
 
 ### What does it do?
-Init is a lightweight script for opening apps during startup.
+Init is a lightweight script for opening apps during computer startup. It allows you to access your OS applications, select them and save them within a file. When the program is run, all files are executed - it's just that simple.
 
+### What does it use?
+This app uses Tkinter for the GUI and the majority of the app funcionality.
 
 ### Credits -
 Wonderful resources used:  
