@@ -7,13 +7,17 @@ import os
 root = tk.Tk()
 apps = []
 
+
+# if a file exists within the OS named save.txt..
 if os.path.isfile('save.txt'):
+    # 'r' stands for read, we f.read the file and save that as tempApps.
+    # Then separate them by comma and put it into an array named tempApps.
     with open('save.txt', 'r') as f:
         tempApps = f.read()
         tempApps = tempApps.split(',')
         print(tempApps)
 
-# This is a function
+# This is a function - destroys the app.
 def exitApp():
     root.destroy()
 
@@ -26,7 +30,7 @@ def addApp():
     filename = filedialog.askopenfilename(initialdir="/Users/Desktop", title="Please Select File",
     # Lets us choose executable files only, or switch to all files if we want to.
     filetypes=(("executables", "*.exe"), ("all files", "*.*")))
-    #Append whichever file we chose to the apps array.
+    # Append whichever file we chose to the apps array.
     apps.append(filename)
     print(filename)
 
